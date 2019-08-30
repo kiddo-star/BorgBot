@@ -45,8 +45,8 @@ async def _(event):
 
     me = borg.me
     userid = event.from_id
-    packname = f"DeadX_{userid}'"
-    packshortname = f"deadx_{userid}"  # format: r4v4n4_userid
+    packname = f"Stolen By @kiddo025"
+    packshortname = f"arnab_{userid}"  # format: r4v4n4_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "DeadX_Sticker.png"
@@ -55,8 +55,8 @@ async def _(event):
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"Stolen Anim.. @dxdeadx"
-        packshortname = f"kangedanideadx"  # format: Uni_Borg_userid
+        packname = f"Animated by @kiddo025"
+        packshortname = f"arnabx_{userid}"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -66,7 +66,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Painting On Process......")
+    await event.edit("Painting On Process . . .")
     
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
