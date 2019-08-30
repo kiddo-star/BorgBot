@@ -1,14 +1,6 @@
-"""Emoji
-
-Available Commands:
-
-.emoji shrug
-
-.emoji apple
-
-.emoji :/
-
-.emoji -_-"""
+"""
+Command .calltg
+"""
 
 from telethon import events
 
@@ -32,7 +24,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "/cull":
+    if input_str == "calltg":
 
         await event.edit(input_str)
 
