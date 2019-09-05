@@ -18,7 +18,11 @@ borg.storage.PREV_REPLY_MESSAGE = {}
 BAALAJI_TG_USER_BOT = "My Master hasn't approved you to PM."
 TG_COMPANION_USER_BOT = "Please wait for his response and don't spam his PM."
 UNIBORG_USER_BOT_WARN_ZERO = "I am currently offline. Please do not SPAM me."
-UNIBORG_USER_BOT_NO_WARN = "Hi! I will answer to your message soon. Please wait for my response and don't spam my PM. Thanks"
+UNIBORG_USER_BOT_NO_WARN = "Welcome, You are a wonderful person with a wonderful view of life.
+
+Your companionship is always an opportunity But Sed This line is not for you.So just tell why you are here ?
+
+Your message has been received will be responded when I'm free don't sit here whole day coz there is lots of pending message😶‚"
 
 
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
@@ -68,7 +72,7 @@ async def approve_p_m(event):
                     await borg.storage.PREV_REPLY_MESSAGE[chat.id].delete()
                     del borg.storage.PREV_REPLY_MESSAGE[chat.id]
                 approve(chat.id, reason)
-                await event.edit("Private Message Accepted")
+                await event.edit("Private Message Accepted Don’t Show Me Attitude 😒")
                 await asyncio.sleep(3)
                 await event.delete()
 
